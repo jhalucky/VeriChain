@@ -24,14 +24,24 @@ const AuthPage = ({ onAuthSuccess }) => {
       });
     } catch (error) {
       console.error('Authentication error:', error);
+      console.error('Error code:', error.code);
+      console.error('Error message:', error.message);
       
       // Handle specific error cases
       if (error.code === 'auth/popup-closed-by-user') {
         setError('Sign-in cancelled. Please try again.');
+      } else if (error.code === 'auth/popup-blocked') {
+        setError('Popup blocked. Please allow popups for this site and try again.');
       } else if (error.code === 'auth/network-request-failed') {
         setError('Network error. Please check your connection.');
+      } else if (error.code === 'auth/unauthorized-domain') {
+        setError('Unauthorized domain. Please contact support.');
+      } else if (error.code === 'auth/operation-not-allowed') {
+        setError('Google sign-in is not enabled. Please contact support.');
+      } else if (error.code === 'auth/configuration-not-found') {
+        setError('Firebase configuration error. Please contact support.');
       } else {
-        setError('Authentication failed. Please try again.');
+        setError(`Authentication failed: ${error.message || error.code || 'Unknown error'}. Please check the browser console for details.`);
       }
     } finally {
       setLoading(false);
