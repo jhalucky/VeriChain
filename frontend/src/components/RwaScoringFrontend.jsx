@@ -36,7 +36,8 @@ export default function RwaScoringFrontend({ onBackToHome }) {
   const [message, setMessage] = useState("");
   const [walletAddr, setWalletAddr] = useState(null);
 
-  const backendBase = "http://localhost:8000"; // change if needed
+  // Use environment variable or fallback to localhost
+  const backendBase = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
 
   const handleFileChange = (e) => setFile(e.target.files?.[0] || null);
 
