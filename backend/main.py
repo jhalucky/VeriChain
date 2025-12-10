@@ -7,7 +7,12 @@ import uuid
 from typing import Optional, Dict, Any
 
 from scorer import extract_text_from_file, pretty_breakdown
-from ml_scrorer import score_asset_ml  # adjust if your file is scorer_ml.py instead
+from ml_scrorer import score_asset_ml
+
+allow_origins=["*"]
+allow_credentials=True
+allow_methods=["*"]
+allow_headers=["*"]
 
 STORAGE_DIR = Path("uploads")
 STORAGE_DIR.mkdir(exist_ok=True)
