@@ -91,7 +91,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 className="w-7 h-7 sm:w-8 sm:h-8"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(209, 188, 0, 0.6))' }}
               />
-              <span className="text-base sm:text-lg font-semibold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>RWA Platform</span>
+              <span className="text-base sm:text-lg font-semibold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}><span className="text-neon-yellow">RWA</span> Platform</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -187,17 +187,17 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
             {/* Main Heading */}
             <h1 className="mb-6 px-4">
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif", letterSpacing: '-0.02em' }}>
-                Transform <span className="gradient-text">Real-World</span>
+                Transform <span className="text-neon-yellow">Real-World</span>
               </span>
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", letterSpacing: '-0.02em' }}>
-                <span className="gradient-text">Assets</span> into Digital Tokens
+                <span className="text-neon-yellow">Assets</span> into Digital Tokens
               </span>
             </h1>
             
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed px-4" style={{ fontFamily: "'Source Sans 3', sans-serif", fontWeight: 300 }}>
-              Unlock liquidity through AI-powered asset scoring and blockchain tokenization. 
-              <span className="block mt-1">Enable fractional ownership of high-value assets in minutes.</span>
+              Unlock <span className="text-neon-yellow">liquidity</span> through AI-powered asset scoring and blockchain tokenization. 
+              <span className="block mt-1">Enable <span className="text-neon-yellow">fractional ownership</span> of high-value assets in minutes.</span>
             </p>
 
             {/* CTA Buttons */}
@@ -243,9 +243,9 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
               />
             </div>
           </div>
-          <h2 className="heading-lg mb-4">Revolutionizing Asset Ownership</h2>
+          <h2 className="heading-lg mb-4"><span className="text-neon-yellow">Revolutionizing</span> Asset Ownership</h2>
           <p className="body-lg text-white/70 max-w-2xl mx-auto">
-            We're building the infrastructure for the future of finance, where real-world assets meet blockchain technology to create unprecedented opportunities for investors worldwide.
+            We're building the infrastructure for the <span className="text-neon-yellow">future</span> of finance, where real-world assets meet blockchain technology to create unprecedented opportunities for investors worldwide.
           </p>
         </div>
       </section>
@@ -254,7 +254,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section id="features" className="py-16 sm:py-20 lg:py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="heading-lg mb-3">Powerful Features</h2>
+            <h2 className="heading-lg mb-3"><span className="text-neon-yellow">Powerful</span> Features</h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Everything you need to tokenize and manage real-world assets
             </p>
@@ -290,7 +290,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 <div className="mb-3 transform group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                <h3 className="heading-sm mb-2">{feature.title}</h3>
+                <h3 className="heading-sm mb-2 text-white">{feature.title}</h3>
                 <p className="body-sm text-white/70">{feature.description}</p>
               </div>
             ))}
@@ -302,7 +302,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-lg mb-3">Why Choose Our Platform</h2>
+            <h2 className="heading-lg mb-3">Why Choose <span className="text-neon-yellow">Our Platform</span></h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Experience the advantages of next-generation asset tokenization
             </p>
@@ -340,7 +340,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                     {benefit.icon}
                   </div>
                   <div>
-                    <h3 className="heading-sm mb-2">{benefit.title}</h3>
+                    <h3 className="heading-sm mb-2 text-white">{benefit.title}</h3>
                     <p className="body-sm text-white/70">{benefit.description}</p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 relative bg-gradient-to-b from-transparent via-dark-surface/50 to-transparent">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="heading-lg mb-3">How It Works</h2>
+            <h2 className="heading-lg mb-3">How <span className="text-neon-yellow">It Works</span></h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Four simple steps to tokenize your assets
             </p>
@@ -398,7 +398,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                   <div className="flex justify-center mb-3">
                     {step.icon}
                   </div>
-                  <h3 className="heading-sm mb-2">{step.title}</h3>
+                  <h3 className="heading-sm mb-2 text-white">{step.title}</h3>
                   <p className="body-sm text-white/70">{step.description}</p>
                 </div>
               </div>
@@ -411,7 +411,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-lg mb-3">Real-World Applications</h2>
+            <h2 className="heading-lg mb-3"><span className="text-neon-yellow">Real-World</span> Applications</h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Discover how tokenization transforms various asset classes
             </p>
@@ -463,7 +463,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 <div className={`w-14 h-14 bg-gradient-to-br ${useCase.color} rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform`}>
                   {useCase.icon}
                 </div>
-                <h3 className="heading-sm mb-2">{useCase.title}</h3>
+                <h3 className="heading-sm mb-2 text-white">{useCase.title}</h3>
                 <p className="body-sm text-white/70">{useCase.description}</p>
               </div>
             ))}
@@ -475,7 +475,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section id="stats-section" className="py-16 sm:py-20 lg:py-24 relative bg-gradient-to-b from-dark-surface/30 to-transparent">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">
-            <h2 className="heading-lg">Trusted by Innovators</h2>
+            <h2 className="heading-lg">Trusted by <span className="text-neon-yellow">Innovators</span></h2>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -486,7 +486,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
               { value: contractsCount, label: 'Contracts', suffix: '' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-1 sm:mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                <div className="text-3xl sm:text-4xl font-bold text-neon-yellow mb-1 sm:mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                   {formatNumber(stat.value)}{stat.suffix}
                 </div>
                 <div className="body-sm text-white/70">{stat.label}</div>
@@ -500,7 +500,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-lg mb-3">Enterprise-Grade Security</h2>
+            <h2 className="heading-lg mb-3"><span className="text-neon-yellow">Enterprise-Grade</span> Security</h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Your assets are protected by industry-leading security measures
             </p>
@@ -531,7 +531,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 <div className="flex justify-center mb-4">
                   {security.icon}
                 </div>
-                <h3 className="heading-sm mb-2">{security.title}</h3>
+                <h3 className="heading-sm mb-2 text-white">{security.title}</h3>
                 <p className="body-sm text-white/70">{security.description}</p>
               </div>
             ))}
@@ -543,7 +543,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section id="technology" className="py-16 sm:py-20 lg:py-24 relative bg-gradient-to-b from-transparent via-dark-surface/50 to-transparent">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
-            <h2 className="heading-lg mb-3">Built on Cutting-Edge Technology</h2>
+            <h2 className="heading-lg mb-3">Built on <span className="text-neon-yellow">Cutting-Edge</span> Technology</h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Leveraging the best tools in blockchain
             </p>
@@ -583,7 +583,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 <div className="w-10 h-10 bg-gradient-to-br from-neon-yellow/20 to-neon-yellow/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform border border-neon-yellow/20">
                   <div className={tech.color}>{tech.icon}</div>
                 </div>
-                <h3 className="heading-sm mb-1.5">{tech.name}</h3>
+                <h3 className="heading-sm mb-1.5 text-white">{tech.name}</h3>
                 <p className="body-sm text-white/70">{tech.description}</p>
               </div>
             ))}
@@ -595,7 +595,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-lg mb-3">Trusted by Industry Leaders</h2>
+            <h2 className="heading-lg mb-3">Trusted by <span className="text-neon-yellow">Industry Leaders</span></h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               See what our users are saying about the platform
             </p>
@@ -648,7 +648,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
       <section className="py-16 sm:py-20 lg:py-24 relative bg-gradient-to-b from-dark-surface/30 to-transparent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-lg mb-3">Frequently Asked Questions</h2>
+            <h2 className="heading-lg mb-3"><span className="text-neon-yellow">Frequently Asked</span> Questions</h2>
             <p className="body-base text-white/70 max-w-2xl mx-auto px-2">
               Everything you need to know about asset tokenization
             </p>
@@ -681,7 +681,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 key={index}
                 className="glass-card p-5 sm:p-6 hover:bg-white/5 transition-all duration-300"
               >
-                <h3 className="heading-sm mb-2 text-white">{faq.question}</h3>
+                <h3 className="heading-sm mb-2 text-white"><span className="text-neon-yellow">Q:</span> {faq.question}</h3>
                 <p className="body-sm text-white/70">{faq.answer}</p>
               </div>
             ))}
@@ -696,9 +696,9 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
             <div className="absolute inset-0 bg-gradient-to-br from-neon-yellow/10 to-neon-yellow/5"></div>
             
             <div className="relative z-10">
-              <h2 className="heading-lg mb-3 text-white">Ready to Tokenize Your Assets?</h2>
+              <h2 className="heading-lg mb-3 text-white">Ready to <span className="text-neon-yellow">Tokenize</span> Your Assets?</h2>
               <p className="body-base text-white/70 mb-6 max-w-xl mx-auto px-2">
-                Join the future of asset ownership. Start tokenizing in minutes.
+                Join the <span className="text-neon-yellow">future</span> of asset ownership. Start tokenizing in minutes.
               </p>
 
               <div className="flex justify-center">
