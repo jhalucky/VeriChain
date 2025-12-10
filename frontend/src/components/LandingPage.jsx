@@ -91,7 +91,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                 className="w-7 h-7 sm:w-8 sm:h-8"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(209, 188, 0, 0.6))' }}
               />
-              <span className="text-base sm:text-lg font-semibold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}><span className="text-neon-yellow">RWA</span> Platform</span>
+              <span className="text-base sm:text-lg font-semibold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}><span className="text-yellow-500">VeriChain</span></span>
             </div>
 
             {/* Desktop Navigation */}
