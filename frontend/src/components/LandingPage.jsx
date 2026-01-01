@@ -85,12 +85,12 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
             <div className="flex items-center gap-2">
-              <img 
+              {/* <img 
                 src="https://pixabay.com/get/g83bf8d58a6453b04ff15ed5d02d1d4e623363eb644736cb0f50fcb84e81d798e8356b6f767f1d699dcf75bf1f4e012b6.svg"
                 alt="RWA Platform Logo - OpenClipart-Vectors on Pixabay"
                 className="w-7 h-7 sm:w-8 sm:h-8"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(209, 188, 0, 0.6))' }}
-              />
+              /> */}
               <span className="text-base sm:text-lg font-semibold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}><span className="text-yellow-500">VeriChain</span></span>
             </div>
 
@@ -232,7 +232,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="mb-8">
             <div className="inline-block perspective-1000">
-              <img 
+              {/* <img 
                 src="https://pixabay.com/get/g83bf8d58a6453b04ff15ed5d02d1d4e623363eb644736cb0f50fcb84e81d798e8356b6f767f1d699dcf75bf1f4e012b6.svg"
                 alt="RWA Platform 3D Logo - OpenClipart-Vectors on Pixabay"
                 className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 animate-3d-rotate"
@@ -240,7 +240,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
                   filter: 'drop-shadow(0 0 30px rgba(209, 188, 0, 0.6)) drop-shadow(0 0 60px rgba(209, 188, 0, 0.4))',
                   transformStyle: 'preserve-3d'
                 }}
-              />
+              /> */}
             </div>
           </div>
           <h2 className="heading-lg mb-4"><span className="text-neon-yellow">Revolutionizing</span> Asset Ownership</h2>
@@ -742,7 +742,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
             <div>
               <h4 className="text-sm font-semibold mb-3" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Community</h4>
               <ul className="space-y-1.5">
-                <li><a href="#" className="text-xs text-white/70 hover:text-white transition-colors flex items-center gap-1.5"><Github size={14} /> GitHub</a></li>
+                <li><a href="https://github.com/jhalucky/VeriChain" className="text-xs text-white/70 hover:text-white transition-colors flex items-center gap-1.5"><Github size={14} /> GitHub</a></li>
                 <li><a href="#" className="text-xs text-white/70 hover:text-white transition-colors flex items-center gap-1.5"><Twitter size={14} /> Twitter</a></li>
                 <li><a href="#" className="text-xs text-white/70 hover:text-white transition-colors">Discord</a></li>
                 <li><a href="#" className="text-xs text-white/70 hover:text-white transition-colors">Telegram</a></li>
@@ -761,7 +761,7 @@ const LandingPage = ({ onLaunchApp, user, onSignOut }) => {
 
           <div className="border-t border-subtle-border pt-6 flex flex-col md:flex-row justify-center items-center gap-2">
             <div className="text-xs text-white/50">
-              © 2024 RWA Tokenization Platform. All rights reserved.
+              © 2025 RWA Tokenization Platform. All rights reserved.
             </div>
           </div>
         </div>

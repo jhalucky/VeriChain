@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 import { Upload as UploadIcon, Cpu, ArrowLeft } from "lucide-react";
 
 
+
 const Button = ({ children, className = "", variant = "default", ...props }) => {
   const baseStyles = "inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm";
   const variants = {
@@ -39,8 +40,9 @@ export default function RwaScoringFrontend({ onBackToHome }) {
   const [deploying, setDeploying] = useState(false);
   const [message, setMessage] = useState("");
   const [walletAddr, setWalletAddr] = useState(null);
+  const [clicked, setClicked] = useState(false);
 
-  // Use environment variable or fallback to localhost
+  
   const backendBase = import.meta.env.VITE_BACKEND_URL || "https://malonyl-judgeable-jayda.ngrok-free.dev";
   console.log(backendBase);
 
@@ -262,8 +264,10 @@ export default function RwaScoringFrontend({ onBackToHome }) {
           <div className="w-4 h-4 border-2 border-neon-yellow/30 border-t-neon-yellow rounded-full animate-spin"></div>
           Processing...
         </div>
+        
       )}
     </Card>
+    
   );
 
   const ScoreCard = () => (
@@ -271,7 +275,7 @@ export default function RwaScoringFrontend({ onBackToHome }) {
       <div className="flex items-center justify-between mb-4">
         <div className="flex-1">
           <div className="text-xs sm:text-sm text-white/60 mb-1">AI Score</div>
-          <div className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-neon-yellow to-electric-cyan bg-clip-text text-transparent">
+          <div className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-neon-yellow to-electric-cyan bg-clip-text">
             {scoreResp ? scoreResp.score : "--"}
           </div>
           <div className="text-xs text-white/50 mt-1">out of 100</div>
@@ -293,14 +297,7 @@ export default function RwaScoringFrontend({ onBackToHome }) {
         </div>
       </div>
 
-      <div className="flex gap-2">
-        <Button onClick={() => navigator.clipboard.writeText(extractedText || "")} variant="default" className="flex-1">
-          Copy Text
-        </Button>
-        <Button onClick={() => setExtractedText("")} variant="secondary" className="flex-1">
-          Clear
-        </Button>
-      </div>
+     
     </Card>
   );
 
@@ -393,6 +390,28 @@ export default function RwaScoringFrontend({ onBackToHome }) {
                 placeholder="Extracted text will appear here, or you can paste your own..."
                 className="w-full p-3 sm:p-4 rounded-lg bg-black/40 border border-white/10 text-white/90 text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-neon-yellow/30 focus:border-neon-yellow/30 transition-all resize-none custom-scrollbar"
               />
+
+              
+              <div className="flex gap-2">
+             <Button
+                  onClick={() => {
+                    navigator.clipboard.writeText(extractedText || "");
+                    setClicked(true);
+
+                    // reset back to "Copy Text" after 2 seconds (optional UX polish)
+                    setTimeout(() => setClicked(false), 2000);
+                  }}
+                  variant="default"
+                  className="flex-1"
+                  id="copyTextButton"
+                >
+                  {clicked ? "Copied" : "Copy Text"}
+                </Button>
+
+              <Button onClick={() => setExtractedText("")} variant="secondary" className="flex-1">
+                Clear
+              </Button>
+            </div>
             </Card>
 
             <ScoreCard />

@@ -92,3 +92,5 @@ npm run dev
 - **CORS errors** - Backend CORS is already configured to allow all origins
 - **Connection refused** - Make sure backend is running with `--host 0.0.0.0`
 
+
+
