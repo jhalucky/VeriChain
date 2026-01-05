@@ -43,7 +43,7 @@ export default function RwaScoringFrontend({ onBackToHome }) {
   const [clicked, setClicked] = useState(false);
 
   
-  const backendBase = import.meta.env.VITE_BACKEND_URL || "https://operation-device-automation-nightlife.trycloudflare.com";
+  const backendBase = import.meta.env.VITE_BACKEND_URL || "https://verichain-xlrz.onrender.com";
   console.log(backendBase);
 
   const handleFileChange = (e) => setFile(e.target.files?.[0] || null);
