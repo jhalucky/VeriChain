@@ -6,7 +6,7 @@ import uuid
 from typing import Optional, Dict, Any
 
 from scorer import extract_text_from_file, pretty_breakdown
-from ml_scrorer import score_asset_ml
+from ml_scorer import score_asset_ml
 
 
 STORAGE_DIR = Path("uploads")
