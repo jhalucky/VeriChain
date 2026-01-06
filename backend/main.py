@@ -6,7 +6,8 @@ import uuid
 from typing import Optional, Dict, Any
 
 from scorer import extract_text_from_file, pretty_breakdown
-from ml_scorer import score_asset_ml
+# from ml_scorer import score_asset_ml
+from heuristic_scorer import score_asset
 
 
 STORAGE_DIR = Path("uploads")
@@ -76,6 +77,32 @@ async def upload(file: UploadFile = File(...)):
 
 @app.post("/score")
 async def score(req: ScoreRequest):
+    if req.asset_id:
+        matches = list(STORAGE_DIR.glob(f"{req.asset_id}_*"))
+        if not matches:
+            raise HTTPException(status_code=404, detail="asset_id not found")
+        text = extract_text_from_file(str(matches[0]))
+    elif req.raw_text:
+        text = req.raw_text
+    else:
+        raise HTTPException(status_code=400, detail="Provide asset_id or raw_text")
+
+    score_value, breakdown = score_asset(
+        text=text,
+        metadata=req.metadata or {}
+    )
+
+    return {
+        "score": score_value,
+        "breakdown": breakdown,
+        "pretty": (
+            f"Structure: {breakdown['structure_score']}, "
+            f"Numbers: {breakdown['numeric_score']}, "
+            f"Keywords: {breakdown['keyword_score']} "
+            f"(hits: {breakdown['keyword_hits']})"
+        )
+    }
+
     if req.asset_id:
         matches = list(STORAGE_DIR.glob(f"{req.asset_id}_*"))
         if not matches:

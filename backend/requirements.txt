@@ -5,7 +5,7 @@ pydantic
 python-dotenv
 pytesseract
 Pillow
-sentence-transformers
 joblib
 numpy
-lightgbm
+python-multipart
+pytesseract
