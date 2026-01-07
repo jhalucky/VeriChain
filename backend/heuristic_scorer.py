@@ -37,6 +37,8 @@ def score_asset(text: str, metadata: Dict | None = None) -> Tuple[float, Dict]:
     ) + meta_bonus
 
     score = max(0.0, min(score, 1.0))
+    score_100 = round(score * 100, 1)
+
 
     breakdown = {
         "structure_score": round(structure_score, 3),
@@ -47,4 +49,13 @@ def score_asset(text: str, metadata: Dict | None = None) -> Tuple[float, Dict]:
         "metadata_bonus": round(meta_bonus, 3),
     }
 
-    return round(score, 3), breakdown
+    return score_100, breakdown
+
+def confidence_band(score_100: float) -> str:
+    if score_100 < 50:
+        return "Low"
+    elif score_100 < 70:
+        return "Medium"
+    elif score_100 < 85:
+        return "High"
+    return "Very High"
