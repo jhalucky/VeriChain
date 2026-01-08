@@ -8,7 +8,7 @@ contract AssetNFT is ERC721, Ownable {
     uint256 public nextTokenId;
     mapping(uint256 => string) public assetMetadata; // ipfs hash or JSON
 
-    constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) {}
+    constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) Ownable(msg.sender) {}
 
     function mintAsset(address to, string calldata metadataURI) external onlyOwner returns (uint256) {
         uint256 tid = ++nextTokenId;
@@ -18,7 +18,7 @@ contract AssetNFT is ERC721, Ownable {
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
-        require(_exists(tokenId), "not exist");
+        require(_ownerOf(tokenId) != address(0), "not exist");
         return assetMetadata[tokenId];
     }
 }
