@@ -8,9 +8,9 @@ async function main() {
   const Factory = await ethers.getContractFactory("FractionalFactory");
   const factory = await Factory.deploy();
 
-  await factory.deployed();
+  await factory.waitForDeployment();
 
-  console.log("FractionalFactory deployed at:", factory.address);
+  console.log("FractionalFactory deployed at:", factory.target);
 }
 
 main().catch((error) => {
